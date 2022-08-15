@@ -1,0 +1,119 @@
+.btn {
+  @apply rounded font-semibold;
+
+  &:disabled {
+    @apply cursor-not-allowed;
+  }
+
+  &:active {
+    box-shadow: inset 0px 0px 999px 100px rgba(0, 0, 0, 0.2);
+  }
+
+  &:focus:active {
+    @apply outline-none;
+  }
+
+  &:focus {
+    @apply outline-none ring-1;
+  }
+
+  &.btn-primary {
+    @apply bg-blue-400;
+
+    &:disabled {
+      @apply bg-gray-400;
+      @apply cursor-not-allowed;
+    }
+
+    &:focus {
+      @apply ring-blue-400;
+    }
+  }
+
+  &.btn-secondary {
+    @apply bg-blue-100 text-white;
+
+    &:disabled {
+      @apply bg-gray-400;
+    }
+    &:focus {
+      @apply ring-blue-100;
+    }
+  }
+
+  &.btn-ghost {
+    @apply bg-transparent border border-gray-300;
+
+    &:disabled {
+      @apply bg-gray-300;
+    }
+
+    &:focus {
+      @apply ring-gray-300;
+    }
+  }
+
+  &.btn-text-primary {
+    @apply text-blue-400 hover:bg-blue-200;
+
+    &:disabled {
+      @apply text-gray-400;
+    }
+
+    &:focus {
+      @apply ring-blue-400;
+    }
+  }
+
+  &.btn-text-secondary {
+    @apply text-blue-100 hover:bg-blue-50;
+
+    &:disabled {
+      @apply text-gray-400;
+    }
+
+    &:focus {
+      @apply ring-blue-100;
+    }
+  }
+
+  &.btn-text-error {
+    @apply text-red-500 hover:bg-red-100;
+
+    &:disabled {
+      @apply text-gray-400;
+    }
+
+    &:focus {
+      @apply ring-red-500;
+    }
+  }
+
+  &.btn-round {
+    @apply rounded-full;
+  }
+
+  &.btn-sm {
+    @apply py-2 px-4 text-xs;
+  }
+
+  &.btn-md {
+    @apply py-3 px-6 text-sm;
+  }
+
+  &.btn-lg {
+    @apply py-4 px-8 text-base;
+  }
+}
+
+a.btn {
+  @apply cursor-pointer block select-none;
+
+  &.btn-ghost {
+    @apply bg-transparent border border-gray-300 text-blue-100;
+
+    &:disabled {
+      @apply bg-gray-400;
+    }
+  }
+}
