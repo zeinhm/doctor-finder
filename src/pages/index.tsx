@@ -28,7 +28,7 @@ const Home: NextPage = () => {
 
   const filteredDoctors = useMemo(() => {
     const filteredByName = doctors.filter((i) =>
-      i.name.toLowerCase().includes(keyword)
+      i.name.toLowerCase().includes(keyword.toLowerCase())
     );
 
     const filteredByHospital = selectedHospital.length
